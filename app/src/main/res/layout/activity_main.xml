@@ -150,7 +150,6 @@
         app:layout_constraintStart_toEndOf="@id/ivArchivedMessage"
         app:layout_constraintTop_toTopOf="@id/ivArchivedMessage"/>
 
-
     <ImageView
         android:id="@+id/ivNotification"
         android:layout_width="21dp"
@@ -246,9 +245,6 @@
                     android:textColor="@color/black"
                     app:layout_constraintStart_toEndOf="@id/ivLogout"
                     app:layout_constraintTop_toTopOf="@id/ivLogout"/>
-
-
-
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
