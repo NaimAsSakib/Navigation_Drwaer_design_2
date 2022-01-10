@@ -2,11 +2,11 @@
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:openDrawer="start"
-    android:id="@+id/drawerLayout"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:openDrawer="start">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,12 +19,12 @@
             android:layout_height="?actionBarSize"
             android:background="@color/purple_500"
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
-            app:popupTheme="@style/Theme.AppCompat.Light"/>
+            app:popupTheme="@style/Theme.AppCompat.Light" />
 
         <FrameLayout
             android:id="@+id/fragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
@@ -32,8 +32,157 @@
         android:id="@+id/navigationView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        app:menu="@menu/navigation_menu"
-        app:headerLayout="@layout/navigation_header"
-        android:layout_gravity="start"/>
+        android:layout_gravity="start">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutConstraintMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutConstraintHeader"
+                android:layout_width="match_parent"
+                android:layout_height="118dp"
+                android:background="#0b4177"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/layoutLinearHeader1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <ImageView
+                        android:id="@+id/ivMHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_menu_logo_police"
+                        app:layout_constraintTop_toTopOf="@+id/layoutLinear1"
+                        app:layout_constraintStart_toStartOf="@+id/layoutLinear1"
+                        />
+                    <LinearLayout
+                        android:id="@+id/layoutLinearHeader2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toEndOf="@id/ivMHeader"
+                        app:layout_constraintTop_toTopOf="@id/ivMHeader"
+                        app:layout_constraintBottom_toBottomOf="@id/ivMHeader"
+                        android:layout_marginLeft="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hello, ADIG Rafsan Majid!"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            android:text="rafsan.majid@gmail.com"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layoutConstraintItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="38dp"
+    app:layout_constraintTop_toBottomOf="@id/layoutConstraintHeader"
+    app:layout_constraintStart_toStartOf="@id/layoutConstraintHeader"
+    android:layout_marginLeft="16dp">
+
+    <ImageView
+        android:id="@+id/ivMessage"
+        android:layout_width="21dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_message_2359"
+        app:layout_constraintStart_toStartOf="@id/layoutConstraintItem"
+        app:layout_constraintTop_toTopOf="@id/layoutConstraintItem"/>
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginLeft="21dp"
+        android:text="Message"
+        android:letterSpacing="0.05"
+        android:lineSpacingExtra="9sp"
+        android:lineHeight="23sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/ivMessage"
+        app:layout_constraintTop_toTopOf="@id/ivMessage"/>
+
+    <ImageView
+        android:id="@+id/ivArchivedMessage"
+        android:layout_width="21dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="43dp"
+        android:src="@drawable/ic_archivemessage_2359"
+        app:layout_constraintStart_toStartOf="@id/layoutConstraintItem"
+        app:layout_constraintTop_toBottomOf="@id/ivMessage"/>
+
+    <TextView
+        android:id="@+id/tvArchivedMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginLeft="21dp"
+        android:text="Archived Message"
+        android:letterSpacing="0.05"
+        android:lineSpacingExtra="9sp"
+        android:lineHeight="23sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/ivArchivedMessage"
+        app:layout_constraintTop_toTopOf="@id/ivArchivedMessage"/>
+
+
+    <ImageView
+        android:id="@+id/ivNotification"
+        android:layout_width="21dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="43dp"
+        android:src="@drawable/ic_icon_notification"
+        app:layout_constraintStart_toStartOf="@id/layoutConstraintItem"
+        app:layout_constraintTop_toBottomOf="@id/ivArchivedMessage"/>
+
+    <TextView
+        android:id="@+id/Notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginLeft="21dp"
+        android:text="Notification"
+        android:letterSpacing="0.05"
+        android:lineSpacingExtra="9sp"
+        android:lineHeight="23sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/ivNotification"
+        app:layout_constraintTop_toTopOf="@id/ivNotification"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>
