@@ -37,16 +37,17 @@ public class MainActivity extends AppCompatActivity {
 
         drawerLayout = findViewById(R.id.drawerLayout);
 
+        //Creating hamburger icon in the toolbar
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_open, R.string.navigation_close);
 
-        drawerLayout.addDrawerListener(toggle);
+        drawerLayout.addDrawerListener(toggle);  //adding listener to toggle or hamburger icon
         toggle.syncState();
 
 
         tvMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openFragment(new MessageFragment(),"Message fragment is open");
+                openFragment(new MessageFragment(),"Message fragment is open");  //openFragment method is written below
             }
         });
 
@@ -96,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
-    private void openFragment(Fragment fragment,String msg){
+    private void openFragment(Fragment fragment,String msg){  //method for opening fragment
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment,fragment).commit();
         Toast.makeText(getApplicationContext(),msg, Toast.LENGTH_LONG).show();
         drawerLayout.closeDrawer(GravityCompat.START);
