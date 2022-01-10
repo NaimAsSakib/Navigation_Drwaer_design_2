@@ -87,7 +87,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        tvLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new LogoutFragment()).commit();
+                Toast.makeText(getApplicationContext(), "Logout panel is open", Toast.LENGTH_LONG).show();
+                drawerLayout.closeDrawer(GravityCompat.START);
+            }
+        });
 
 
     }
