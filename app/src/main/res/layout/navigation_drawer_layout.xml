@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutConstraintMenu">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutConstraintHeader"
+        android:layout_width="match_parent"
+        android:layout_height="118dp"
+        android:background="#0b4177"
+        app:layout_constraintStart_toStartOf="@id/layoutConstraintMenu"
+        app:layout_constraintTop_toTopOf="@id/layoutConstraintMenu">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutLinearHeader1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/layoutConstraintHeader"
+            app:layout_constraintEnd_toEndOf="@id/layoutConstraintHeader"
+            app:layout_constraintStart_toStartOf="@id/layoutConstraintHeader"
+            app:layout_constraintTop_toTopOf="@id/layoutConstraintHeader">
+
+            <ImageView
+                android:id="@+id/ivMHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/ic_menu_logo_police"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/layoutLinearHeader2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/ivMHeader"
+                app:layout_constraintStart_toEndOf="@id/ivMHeader"
+                app:layout_constraintTop_toTopOf="@id/ivMHeader">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello, ADIG Rafsan Majid!"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="rafsan.majid@gmail.com"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutConstraintItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="38dp"
+        app:layout_constraintStart_toStartOf="@id/layoutConstraintHeader"
+        app:layout_constraintTop_toBottomOf="@id/layoutConstraintHeader">
+
+        <ImageView
+            android:id="@+id/ivMessage"
+            android:layout_width="21dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_message_2359"
+            app:layout_constraintStart_toStartOf="@id/layoutConstraintItem"
+            app:layout_constraintTop_toTopOf="@id/layoutConstraintItem" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:letterSpacing="0.05"
+            android:lineHeight="23sp"
+            android:lineSpacingExtra="9sp"
+            android:text="Message"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/ivMessage"
+            app:layout_constraintTop_toTopOf="@id/ivMessage" />
+
+        <ImageView
+            android:id="@+id/ivArchivedMessage"
+            android:layout_width="21dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="43dp"
+            android:src="@drawable/ic_archivemessage_2359"
+            app:layout_constraintStart_toStartOf="@id/layoutConstraintItem"
+            app:layout_constraintTop_toBottomOf="@id/ivMessage" />
+
+        <TextView
+            android:id="@+id/tvArchivedMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:letterSpacing="0.05"
+            android:lineHeight="23sp"
+            android:lineSpacingExtra="9sp"
+            android:text="Archived Message"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/ivArchivedMessage"
+            app:layout_constraintTop_toTopOf="@id/ivArchivedMessage" />
+
+        <ImageView
+            android:id="@+id/ivNotification"
+            android:layout_width="21dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="43dp"
+            android:src="@drawable/ic_icon_notification"
+            app:layout_constraintStart_toStartOf="@id/layoutConstraintItem"
+            app:layout_constraintTop_toBottomOf="@id/ivArchivedMessage" />
+
+        <TextView
+            android:id="@+id/tvNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:letterSpacing="0.05"
+            android:lineHeight="23sp"
+            android:lineSpacingExtra="9sp"
+            android:text="Notification"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/ivNotification"
+            app:layout_constraintTop_toTopOf="@id/ivNotification" />
+
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="21dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="43dp"
+            android:src="@drawable/ic_profile_2385"
+            app:layout_constraintStart_toStartOf="@id/layoutConstraintItem"
+            app:layout_constraintTop_toBottomOf="@id/ivNotification" />
+
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:letterSpacing="0.05"
+            android:lineHeight="23sp"
+            android:lineSpacingExtra="9sp"
+            android:text="Profile"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/ivProfile"
+            app:layout_constraintTop_toTopOf="@id/ivProfile" />
+
+        <ImageView
+            android:id="@+id/ivChangePass"
+            android:layout_width="21dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="43dp"
+            android:src="@drawable/ic_changepassword"
+            app:layout_constraintStart_toStartOf="@id/layoutConstraintItem"
+            app:layout_constraintTop_toBottomOf="@id/ivProfile" />
+
+        <TextView
+            android:id="@+id/tvChangePass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:letterSpacing="0.05"
+            android:lineHeight="23sp"
+            android:lineSpacingExtra="9sp"
+            android:text="Change Password"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/ivChangePass"
+            app:layout_constraintTop_toTopOf="@id/ivChangePass" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/ivLogout"
+        android:layout_width="21dp"
+        android:layout_height="16dp"
+        android:layout_marginBottom="38dp"
+        android:src="@drawable/ic_logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/layoutConstraintItem" />
+
+    <TextView
+        android:id="@+id/tvLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="21dp"
+        android:letterSpacing="0.05"
+        android:lineHeight="23sp"
+        android:lineSpacingExtra="9sp"
+        android:text="Log Out"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/ivLogout"
+        app:layout_constraintTop_toTopOf="@id/ivLogout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

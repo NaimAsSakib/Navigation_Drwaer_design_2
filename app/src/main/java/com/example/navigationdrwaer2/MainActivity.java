@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         tvMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new MessageFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new MessageFragment()).commit();
                 Toast.makeText(getApplicationContext(), "Message panel is open", Toast.LENGTH_LONG).show();
                 drawerLayout.closeDrawer(GravityCompat.START);
             }
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         tvArchivedMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new ArchivedMessageFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new ArchivedMessageFragment()).commit();
                 Toast.makeText(getApplicationContext(), "Archived Message panel is open", Toast.LENGTH_LONG).show();
                 drawerLayout.closeDrawer(GravityCompat.START);
             }
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         tvNotification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new NotificationFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new NotificationFragment()).commit();
                 Toast.makeText(getApplicationContext(), "Notification panel is open", Toast.LENGTH_LONG).show();
                 drawerLayout.closeDrawer(GravityCompat.START);
             }
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         tvProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new ProfileFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new ProfileFragment()).commit();
                 Toast.makeText(getApplicationContext(), "Profile panel is open", Toast.LENGTH_LONG).show();
                 drawerLayout.closeDrawer(GravityCompat.START);
             }
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         tvChangePass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new ChangePassFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new ChangePassFragment()).commit();
                 Toast.makeText(getApplicationContext(), "Change Password panel is open", Toast.LENGTH_LONG).show();
                 drawerLayout.closeDrawer(GravityCompat.START);
             }
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         tvLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new LogoutFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new LogoutFragment()).commit();
                 Toast.makeText(getApplicationContext(), "Logout panel is open", Toast.LENGTH_LONG).show();
                 drawerLayout.closeDrawer(GravityCompat.START);
             }
