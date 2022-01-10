@@ -44,8 +44,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="118dp"
                 android:background="#0b4177"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintStart_toStartOf="@id/layoutConstraintMenu"
+                app:layout_constraintTop_toTopOf="@id/layoutConstraintMenu">
 
                 <LinearLayout
                     android:id="@+id/layoutLinearHeader1"
@@ -53,10 +53,10 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:gravity="center"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent">
+                    app:layout_constraintStart_toStartOf="@id/layoutConstraintHeader"
+                    app:layout_constraintEnd_toEndOf="@id/layoutConstraintHeader"
+                    app:layout_constraintTop_toTopOf="@id/layoutConstraintHeader"
+                    app:layout_constraintBottom_toBottomOf="@id/layoutConstraintHeader">
 
                     <ImageView
                         android:id="@+id/ivMHeader"
@@ -161,7 +161,7 @@
         app:layout_constraintTop_toBottomOf="@id/ivArchivedMessage"/>
 
     <TextView
-        android:id="@+id/Notification"
+        android:id="@+id/tvNotification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14sp"
@@ -174,10 +174,81 @@
         app:layout_constraintStart_toEndOf="@id/ivNotification"
         app:layout_constraintTop_toTopOf="@id/ivNotification"/>
 
+    <ImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="21dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="43dp"
+        android:src="@drawable/ic_profile_2385"
+        app:layout_constraintStart_toStartOf="@id/layoutConstraintItem"
+        app:layout_constraintTop_toBottomOf="@id/ivNotification"/>
 
+    <TextView
+        android:id="@+id/tvProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginLeft="21dp"
+        android:text="Profile"
+        android:letterSpacing="0.05"
+        android:lineSpacingExtra="9sp"
+        android:lineHeight="23sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/ivProfile"
+        app:layout_constraintTop_toTopOf="@id/ivProfile"/>
+
+    <ImageView
+        android:id="@+id/ivChangePass"
+        android:layout_width="21dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="43dp"
+        android:src="@drawable/ic_changepassword"
+        app:layout_constraintStart_toStartOf="@id/layoutConstraintItem"
+        app:layout_constraintTop_toBottomOf="@id/ivProfile"/>
+
+    <TextView
+        android:id="@+id/tvChangePass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginLeft="21dp"
+        android:text="Change Password"
+        android:letterSpacing="0.05"
+        android:lineSpacingExtra="9sp"
+        android:lineHeight="23sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/ivChangePass"
+        app:layout_constraintTop_toTopOf="@id/ivChangePass"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <ImageView
+                    android:id="@+id/ivLogout"
+                    android:layout_width="21dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_logout"
+                    app:layout_constraintStart_toStartOf="@id/layoutConstraintItem"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="38dp"/>
+
+                <TextView
+                    android:id="@+id/tvLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="21dp"
+                    android:text="Log Out"
+                    android:letterSpacing="0.05"
+                    android:lineSpacingExtra="9sp"
+                    android:lineHeight="23sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/ivLogout"
+                    app:layout_constraintTop_toTopOf="@id/ivLogout"/>
+
+
+
 
 
 
