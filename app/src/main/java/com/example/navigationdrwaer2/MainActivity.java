@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.View;
@@ -45,54 +46,42 @@ public class MainActivity extends AppCompatActivity {
         tvMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new MessageFragment()).commit();
-                Toast.makeText(getApplicationContext(), "Message panel is open", Toast.LENGTH_LONG).show();
-                drawerLayout.closeDrawer(GravityCompat.START);
+                openFragment(new MessageFragment(),"Message fragment is open");
             }
         });
 
         tvArchivedMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new ArchivedMessageFragment()).commit();
-                Toast.makeText(getApplicationContext(), "Archived Message panel is open", Toast.LENGTH_LONG).show();
-                drawerLayout.closeDrawer(GravityCompat.START);
+                openFragment(new ArchivedMessageFragment(),"Archived Message fragment is open");
             }
         });
 
         tvNotification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new NotificationFragment()).commit();
-                Toast.makeText(getApplicationContext(), "Notification panel is open", Toast.LENGTH_LONG).show();
-                drawerLayout.closeDrawer(GravityCompat.START);
+                openFragment(new NotificationFragment(),"Notification fragment is open");
             }
         });
 
         tvProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new ProfileFragment()).commit();
-                Toast.makeText(getApplicationContext(), "Profile panel is open", Toast.LENGTH_LONG).show();
-                drawerLayout.closeDrawer(GravityCompat.START);
+                openFragment(new ProfileFragment(),"Profile fragment is open");
             }
         });
 
         tvChangePass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new ChangePassFragment()).commit();
-                Toast.makeText(getApplicationContext(), "Change Password panel is open", Toast.LENGTH_LONG).show();
-                drawerLayout.closeDrawer(GravityCompat.START);
+                openFragment(new ChangePassFragment(),"Change Password fragment is open");
             }
         });
 
         tvLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new LogoutFragment()).commit();
-                Toast.makeText(getApplicationContext(), "Logout panel is open", Toast.LENGTH_LONG).show();
-                drawerLayout.closeDrawer(GravityCompat.START);
+                openFragment(new LogoutFragment(),"Logout fragment is open");
             }
         });
 
@@ -106,5 +95,10 @@ public class MainActivity extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
+    }
+    private void openFragment(Fragment fragment,String msg){
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment,fragment).commit();
+        Toast.makeText(getApplicationContext(),msg, Toast.LENGTH_LONG).show();
+        drawerLayout.closeDrawer(GravityCompat.START);
     }
 }
