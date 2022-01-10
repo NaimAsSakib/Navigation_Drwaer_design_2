@@ -69,6 +69,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        tvProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new ProfileFragment()).commit();
+                Toast.makeText(getApplicationContext(), "Profile panel is open", Toast.LENGTH_LONG).show();
+                drawerLayout.closeDrawer(GravityCompat.START);
+            }
+        });
+
 
 
 
