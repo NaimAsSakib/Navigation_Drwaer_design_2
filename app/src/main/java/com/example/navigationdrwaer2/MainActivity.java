@@ -78,6 +78,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        tvChangePass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new ChangePassFragment()).commit();
+                Toast.makeText(getApplicationContext(), "Change Password panel is open", Toast.LENGTH_LONG).show();
+                drawerLayout.closeDrawer(GravityCompat.START);
+            }
+        });
+
 
 
 
