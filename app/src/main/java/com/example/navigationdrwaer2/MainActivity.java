@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,7 +17,7 @@ import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
-    private TextView tvMessage, tvArchivedMessage, tvNotification, tvProfile, tvChangePass, tvLogout;
+    private LinearLayout linearLayoutMessage, linearLayoutArchMessage, linearLayoutNotification, linearLayoutProfile,linearLayoutChangePass,linearLayoutLogout;
 
 
     @Override
@@ -24,12 +25,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tvMessage = findViewById(R.id.tvMessage);
-        tvArchivedMessage = findViewById(R.id.tvArchivedMessage);
-        tvNotification = findViewById(R.id.tvNotification);
-        tvProfile = findViewById(R.id.tvProfile);
-        tvChangePass = findViewById(R.id.tvChangePass);
-        tvLogout = findViewById(R.id.tvLogout);
+
+        linearLayoutMessage=findViewById(R.id.linearForMessage);
+        linearLayoutArchMessage=findViewById(R.id.linearForArchivedMessage);
+        linearLayoutNotification=findViewById(R.id.linearForNotification);
+        linearLayoutProfile=findViewById(R.id.linearForProfile);
+        linearLayoutChangePass=findViewById(R.id.linearForChangePass);
+        linearLayoutLogout=findViewById(R.id.linearForLogout);
 
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -44,42 +46,42 @@ public class MainActivity extends AppCompatActivity {
         toggle.syncState();
 
 
-        tvMessage.setOnClickListener(new View.OnClickListener() {
+        linearLayoutMessage.setOnClickListener(new View.OnClickListener() {  //set listener on whole particular layout
             @Override
             public void onClick(View v) {
                 openFragment(new MessageFragment(),"Message fragment is open");  //openFragment method is written below
             }
         });
 
-        tvArchivedMessage.setOnClickListener(new View.OnClickListener() {
+        linearLayoutArchMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openFragment(new ArchivedMessageFragment(),"Archived Message fragment is open");
             }
         });
 
-        tvNotification.setOnClickListener(new View.OnClickListener() {
+        linearLayoutNotification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openFragment(new NotificationFragment(),"Notification fragment is open");
             }
         });
 
-        tvProfile.setOnClickListener(new View.OnClickListener() {
+        linearLayoutProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openFragment(new ProfileFragment(),"Profile fragment is open");
             }
         });
 
-        tvChangePass.setOnClickListener(new View.OnClickListener() {
+        linearLayoutChangePass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openFragment(new ChangePassFragment(),"Change Password fragment is open");
             }
         });
 
-        tvLogout.setOnClickListener(new View.OnClickListener() {
+        linearLayoutLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openFragment(new LogoutFragment(),"Logout fragment is open");
