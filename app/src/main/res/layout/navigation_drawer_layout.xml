@@ -88,9 +88,24 @@
                 android:letterSpacing="0.05"
                 android:lineHeight="23sp"
                 android:lineSpacingExtra="9sp"
-                android:text="Message"
+                android:text="Messages"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="21dp"
+                android:layout_marginLeft="9dp"
+                android:background="@drawable/menu_message_no_notification"
+                android:text="3"
+                android:textColor="#e61d07"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="7sp"
+                android:textSize="12sp"
+                android:paddingStart="13dp"
+                android:paddingEnd="13dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"/>
+
 
         </LinearLayout>
 
@@ -149,6 +164,21 @@
                 android:text="Notification"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="21dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/menu_message_no_notification"
+                android:text="2"
+                android:textColor="#e61d07"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="7sp"
+                android:textSize="12sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"/>
 
         </LinearLayout>
 
