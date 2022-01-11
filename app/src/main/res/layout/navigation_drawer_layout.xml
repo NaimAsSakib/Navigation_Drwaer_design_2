@@ -14,15 +14,7 @@
         app:layout_constraintStart_toStartOf="@id/layoutConstraintMenu"
         app:layout_constraintTop_toTopOf="@id/layoutConstraintMenu">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layoutLinearHeader1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="@id/layoutConstraintHeader"
-            app:layout_constraintEnd_toEndOf="@id/layoutConstraintHeader"
-            app:layout_constraintStart_toStartOf="@id/layoutConstraintHeader"
-            app:layout_constraintTop_toTopOf="@id/layoutConstraintHeader">
+
 
             <ImageView
                 android:id="@+id/ivMHeader"
@@ -61,7 +53,6 @@
 
             </LinearLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -74,146 +65,183 @@
         app:layout_constraintStart_toStartOf="@id/layoutConstraintHeader"
         app:layout_constraintTop_toBottomOf="@id/layoutConstraintHeader">
 
-        <ImageView
-            android:id="@+id/ivMessage"
-            android:layout_width="21dp"
-            android:layout_height="16dp"
-            android:src="@drawable/ic_message_2359"
-            app:layout_constraintStart_toStartOf="@id/layoutConstraintItem"
-            app:layout_constraintTop_toTopOf="@id/layoutConstraintItem" />
-
-        <TextView
-            android:id="@+id/tvMessage"
+        <LinearLayout
+            android:id="@+id/linearForMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="21dp"
-            android:letterSpacing="0.05"
-            android:lineHeight="23sp"
-            android:lineSpacingExtra="9sp"
-            android:text="Message"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@id/ivMessage"
-            app:layout_constraintTop_toTopOf="@id/ivMessage" />
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/layoutConstraintItem"
+            app:layout_constraintTop_toTopOf="@id/layoutConstraintItem">
 
-        <ImageView
-            android:id="@+id/ivArchivedMessage"
-            android:layout_width="21dp"
-            android:layout_height="16dp"
+            <ImageView
+                android:id="@+id/ivMessage"
+                android:layout_width="21dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_message_2359"
+                />
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:letterSpacing="0.05"
+                android:lineHeight="23sp"
+                android:lineSpacingExtra="9sp"
+                android:text="Message"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearForArchivedMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="43dp"
-            android:src="@drawable/ic_archivemessage_2359"
-            app:layout_constraintStart_toStartOf="@id/layoutConstraintItem"
-            app:layout_constraintTop_toBottomOf="@id/ivMessage" />
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/linearForMessage"
+            app:layout_constraintStart_toStartOf="@id/linearForMessage">
 
-        <TextView
-            android:id="@+id/tvArchivedMessage"
+            <ImageView
+                android:id="@+id/ivArchivedMessage"
+                android:layout_width="21dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_archivemessage_2359" />
+
+            <TextView
+                android:id="@+id/tvArchivedMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:letterSpacing="0.05"
+                android:lineHeight="23sp"
+                android:lineSpacingExtra="9sp"
+                android:text="Archived Message"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearForNotification"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="21dp"
-            android:letterSpacing="0.05"
-            android:lineHeight="23sp"
-            android:lineSpacingExtra="9sp"
-            android:text="Archived Message"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@id/ivArchivedMessage"
-            app:layout_constraintTop_toTopOf="@id/ivArchivedMessage" />
-
-        <ImageView
-            android:id="@+id/ivNotification"
-            android:layout_width="21dp"
-            android:layout_height="16dp"
             android:layout_marginTop="43dp"
-            android:src="@drawable/ic_icon_notification"
-            app:layout_constraintStart_toStartOf="@id/layoutConstraintItem"
-            app:layout_constraintTop_toBottomOf="@id/ivArchivedMessage" />
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/linearForArchivedMessage"
+            app:layout_constraintStart_toStartOf="@id/linearForArchivedMessage">
 
-        <TextView
-            android:id="@+id/tvNotification"
+            <ImageView
+                android:id="@+id/ivNotification"
+                android:layout_width="21dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_icon_notification" />
+
+            <TextView
+                android:id="@+id/tvNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:letterSpacing="0.05"
+                android:lineHeight="23sp"
+                android:lineSpacingExtra="9sp"
+                android:text="Notification"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearForProfile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="21dp"
-            android:letterSpacing="0.05"
-            android:lineHeight="23sp"
-            android:lineSpacingExtra="9sp"
-            android:text="Notification"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@id/ivNotification"
-            app:layout_constraintTop_toTopOf="@id/ivNotification" />
-
-        <ImageView
-            android:id="@+id/ivProfile"
-            android:layout_width="21dp"
-            android:layout_height="16dp"
             android:layout_marginTop="43dp"
-            android:src="@drawable/ic_profile_2385"
-            app:layout_constraintStart_toStartOf="@id/layoutConstraintItem"
-            app:layout_constraintTop_toBottomOf="@id/ivNotification" />
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/linearForNotification"
+            app:layout_constraintStart_toStartOf="@id/linearForNotification">
 
-        <TextView
-            android:id="@+id/tvProfile"
+            <ImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="21dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_profile_2385" />
+
+            <TextView
+                android:id="@+id/tvProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:letterSpacing="0.05"
+                android:lineHeight="23sp"
+                android:lineSpacingExtra="9sp"
+                android:text="Profile"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearForChangePass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="21dp"
-            android:letterSpacing="0.05"
-            android:lineHeight="23sp"
-            android:lineSpacingExtra="9sp"
-            android:text="Profile"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@id/ivProfile"
-            app:layout_constraintTop_toTopOf="@id/ivProfile" />
-
-        <ImageView
-            android:id="@+id/ivChangePass"
-            android:layout_width="21dp"
-            android:layout_height="16dp"
             android:layout_marginTop="43dp"
-            android:src="@drawable/ic_changepassword"
-            app:layout_constraintStart_toStartOf="@id/layoutConstraintItem"
-            app:layout_constraintTop_toBottomOf="@id/ivProfile" />
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/linearForProfile"
+            app:layout_constraintStart_toStartOf="@id/linearForProfile">
 
-        <TextView
-            android:id="@+id/tvChangePass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="21dp"
-            android:letterSpacing="0.05"
-            android:lineHeight="23sp"
-            android:lineSpacingExtra="9sp"
-            android:text="Change Password"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@id/ivChangePass"
-            app:layout_constraintTop_toTopOf="@id/ivChangePass" />
+            <ImageView
+                android:id="@+id/ivChangePass"
+                android:layout_width="21dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_changepassword" />
+
+            <TextView
+                android:id="@+id/tvChangePass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:letterSpacing="0.05"
+                android:lineHeight="23sp"
+                android:lineSpacingExtra="9sp"
+                android:text="Change Password"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    <ImageView
-        android:id="@+id/ivLogout"
-        android:layout_width="21dp"
-        android:layout_height="16dp"
-        android:layout_marginBottom="38dp"
-        android:src="@drawable/ic_logout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@id/layoutConstraintItem" />
-
-    <TextView
-        android:id="@+id/tvLogout"
+    <LinearLayout
+        android:id="@+id/linearForLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="21dp"
-        android:letterSpacing="0.05"
-        android:lineHeight="23sp"
-        android:lineSpacingExtra="9sp"
-        android:text="Log Out"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@id/ivLogout"
-        app:layout_constraintTop_toTopOf="@id/ivLogout" />
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/layoutConstraintMenu"
+        app:layout_constraintStart_toStartOf="@id/layoutConstraintMenu"
+        android:layout_marginBottom="38dp">
+
+        <ImageView
+            android:id="@+id/ivLogout"
+            android:layout_width="21dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_logout" />
+
+        <TextView
+            android:id="@+id/tvLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:letterSpacing="0.05"
+            android:lineHeight="23sp"
+            android:lineSpacingExtra="9sp"
+            android:text="Log Out"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
