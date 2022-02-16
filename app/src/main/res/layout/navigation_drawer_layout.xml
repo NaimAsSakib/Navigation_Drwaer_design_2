@@ -92,8 +92,8 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
             <TextView
-                android:layout_width="32dp"
-                android:layout_height="21dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="9dp"
                 android:background="@drawable/menu_message_no_notification"
                 android:text="3"
@@ -103,8 +103,8 @@
                 android:textSize="12sp"
                 android:paddingStart="13dp"
                 android:paddingEnd="13dp"
-                android:paddingTop="1dp"
-                android:paddingBottom="1dp"/>
+                android:paddingTop="3dp"
+                android:paddingBottom="1.5dp"/>
 
 
         </LinearLayout>
@@ -177,8 +177,8 @@
                 android:textSize="12sp"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
-                android:paddingTop="1dp"
-                android:paddingBottom="1dp"/>
+                android:paddingTop="3dp"
+                android:paddingBottom="1.5dp"/>
 
         </LinearLayout>
 
